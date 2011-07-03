@@ -1,0 +1,28 @@
+<h1>Getters & Setters</h1>
+<div>
+      
+<ul>
+    <li>Also called accessor properties. They have "enumerable" and "configurable" attributes.</li>
+    <li>Events can be triggered when new value is assigned to a property.
+    <input type="button" name="RunSnippetButton" value="Run" />
+<textarea rows="8" cols="88">
+var book={ title: 'default', stock: 10 };
+Object.defineProperty(book,"copies",{
+    set: function(val){  (val>this.stock)? alert('No stock'): alert('Book available');     }
+});
+book.copies=9; //Verifies stock during assignment itself
+</textarea>
+    </li>
+
+    <li>Events can be triggered when value is read.
+    <input type="button" name="RunSnippetButton" value="Run" />
+<textarea rows="8" cols="88">
+var book={ title: 'Alchemist', price: 100 };
+Object.defineProperty(book,"offerPrice",{   enumerable:true,
+    get: function(){    return (this.price-(this.price*0.4));    }
+});
+alert(book.offerPrice); //Calculates discount while reading itself
+</textarea>
+</li>
+</ul>   
+</div>

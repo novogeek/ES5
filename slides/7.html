@@ -1,0 +1,32 @@
+<h1>Few more new methods...</h1>
+<div>
+    <ul>
+    <li>Easier array iterations for common tasks like finding a DOM node, iterating over JSON data etc. </li>
+    <li>New array methods: indexOf, lastIndexOf, forEach, every, some, filter, map, reduce, reduceRight.</li>
+    <li>Native JSON support with JSON.parse(string) and JSON.stringify(object)</li>
+    <li>More operations on natives like: "  hey ".trim(), Array.isArray, Date.now etc</li>
+    <li>Few examples using the new ES5 methods
+    <input type="button" name="RunSnippetButton" value="Run" />
+<textarea rows="10" cols="75">
+mapDemo();  //reduceDemo();     //everyDemo();  //strTrim();
+function mapDemo(){
+    var arr=[1,2,3,4];
+    function cube(val){   return Math.pow(val, 3);    }
+    alert('Cubes: '+arr.map(cube));
+}
+function reduceDemo(){
+    var arr=[1,2,3,4];
+    var sum = arr.reduce(function(sofar, next) {  return sofar+ next; })
+    alert('sum of numbers: '+sum);
+}
+function everyDemo(){
+    function isEven(val){    return val%2===0    }
+    alert([2,4,6,8].every(isEven));
+}
+function strTrim(){
+    alert("  hello  ".trim().length);
+}
+</textarea>
+    </li>
+    </ul>
+</div>

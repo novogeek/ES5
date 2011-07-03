@@ -1,0 +1,25 @@
+<h1> More secure objects </h1>
+<div>
+<ul>
+    <li>Accidental/intentional damage is prevented. Even better security is provided by newer methods. </li>
+    <li>Object.preventExtensions() disallows adding new properties.
+            <input type="button" name="RunSnippetButton" value="Run" />
+<textarea rows="5" cols="88">
+var book={ title: 'Alchemist',  author: 'Paulo Coelho' };
+Object.preventExtensions(book);     book.price=300;     
+alert('Properties : "'+Object.keys(book)+'". IsExtensible: '+Object.isExtensible(book));
+</textarea>
+    </li>
+    <li>Object.seal() prevents extension & configuration, but allows assignment. Object.freeze() seals and makes the object read-only.
+    <input type="button" name="RunSnippetButton" value="Run" />
+<textarea rows="10" cols="100">
+var book={ title: 'Alchemist',  author: 'Paulo Coelho' };   Object.seal(book);      
+delete(book.title);      book.author='Kris'; //Delete fails, assignment works.
+alert('After sealing:- Author: '+book.author+'. IsSealed: '+Object.isSealed(book));
+Object.freeze(book);    
+book.author='Ram';  //Assignment fails, old value is retained.
+alert('After freezing:- author: '+book.author+'. IsFrozen: '+Object.isFrozen(book));
+</textarea>
+    </li>
+</ul>
+</div>

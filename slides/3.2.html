@@ -1,0 +1,26 @@
+<h1>
+    Extending objects in ES5</h1>
+<div>
+    <ul>
+        <li>ES5's object constructor methods cut down repetitious code.</li>
+        <li>Base class can be extended easily using Object.create()
+            <input type="button" name="RunSnippetButton" value="Run" />
+<textarea style="display: block" rows="5" cols="80">
+var book={ title: 'default',  author: 'default' };
+var techBook=Object.create(book,{  category:{value: 'technology'}  });
+alert(techBook.category);
+</textarea>
+        </li>
+        
+        <li>
+            Properties can be defined at any time using Object.defineProperty()<input type="button" name="RunSnippetButton" value="Run" />
+<textarea style="display: block" rows="8" cols="80">
+var book={ title: 'default',  author: 'default' };
+var comicBook=Object.create(book);
+Object.defineProperty(comicBook, "category",{value: 'comic'});
+alert(comicBook.category);
+</textarea>
+        </li>
+        <li>In ES3, properties are added like: comicBook.publisher="name". How is the ES5 style helpful?</li>
+    </ul>
+</div>

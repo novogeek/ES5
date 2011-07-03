@@ -1,0 +1,20 @@
+<h1>Better control over properties</h1>
+<div>
+<ul>
+    <li>In ES3, propeties were name/value pairs. In ES5, properties have "writable", "enumerable", "configurable" attributes, default value being 'false'.</li>
+    <li>"writable" attribute controls assignment of values, "enumerable" hides a property during inspection of object, "configurable" controls alteration/deletion of properties.</li>
+    <li>E.g., If "writable" attribute is false, new values cannot be assigned.
+    <input type="button" name="RunSnippetButton" value="Run" />
+<textarea rows="12" cols="88">
+var book={ title: 'default',  author: 'default' };
+var mybookDescriptor={
+    publisher: {    enumerable: true, writable: false, configurable: false, value: 'Wiley'    },
+    rating:{    enumerable: true, writable: true, configurable: false, value: '5'}
+};
+var techBook=Object.defineProperties(book,mybookDescriptor);
+techBook.publisher='Kris';  //assigning value to read-only property ("writable" is false).
+alert(techBook.publisher);  //alerts initial value.
+</textarea>
+    </li>
+</ul>
+</div>

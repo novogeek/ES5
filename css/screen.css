@@ -1,0 +1,127 @@
+/* @group reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .btn 
+{ margin: 0; padding: 0; border: 0; font-size: 100%; font-family: inherit; vertical-align: baseline }
+a img, frameset { border: 0; }
+table {	border-collapse: collapse; border-spacing: 0; }
+caption, th, td { text-align: left;	font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q {	quotes: "" ""; }
+/* @end */
+
+/* @group utility */
+.hide { display: none; }
+.contain-overflow { overflow: hidden; }
+.screen-reader { display: block; left: -9999px; position: absolute; top: -9999px; }
+.row:after, .clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.amp { font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif; font-size: 1.1em; font-style: italic; font-weight: normal; }
+/* @end */
+
+/* @group =base */
+body {
+  background: url("../css/bg-page_med1.jpg") repeat scroll 0 0 transparent;
+  color: #224466;
+	font: 24px/36px Helvetica, Arial, Sans-Serif;
+}
+
+	/* @group -headers */
+	h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+	h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; }
+	h1 { color: #34346B; font-size: 40px; line-height: 40px; }
+	h4 { font-size: 18px; line-height: 18px; }
+	/* @end */
+
+	/* @group -links */
+	a, a:link { text-decoration: underline; }
+	a:visited {}
+	a:hover { text-decoration: none; }
+	a:active {}
+	/* @end */
+	
+	/* @group -basic text */
+	p, ol, ul, table { margin: 0 0 30px; }
+	ul { list-style: square; }
+	li { border-bottom: 1px solid #BDC7D8; padding: 10px 0; }
+	/*li:first-child { padding-top: 0; }
+	li:last-child { border-bottom: none; padding-bottom: 0; }*/
+	/* @end */
+
+	/* @group -header/footer */
+	#header, #footer {
+	  background: #34346B; 
+	  color: #DDDDEE;
+	  font-size: 14px; 
+	  line-height: 14px;
+	  position: fixed;
+	  width: 100%;
+	  /*z-index: 10;*/
+	}
+	#header { top: 0; height: 75px; border-bottom: solid 2px #F29A04; }
+	#footer { bottom: 0; font-weight:bold; height: 40px; border-top: solid 1px #F29A04;}
+	#footer a{ color:#FFF; font-size:14px;}
+	#header .techEdLogo{ padding: 10px; height:85px; background: url("../css/techEd2011_sm.jpg") no-repeat scroll 0 0 transparent;}
+	#header .mughLogo{background: url("../css/mughlogo_sm.jpg") no-repeat scroll 0 0 transparent; width: 74px; height: 86px; position: absolute; top: 0px; right: 0px;
+	                    border: solid 1px #808080;
+	                  }
+	#footer .container { padding: 15px; }
+	#pagerSpan{float: right; }
+	/* @end */	
+	
+	/* @group -form elements */
+	button { 
+		cursor: pointer; 
+		width: auto;
+		overflow: visible;
+	}
+	label { font-weight: bold; }
+	/* @end */		
+
+/* @end */
+/* @group =pages */
+
+  /* @group -slides */
+  #slides { top: 40px; }
+  .slide { padding: 100px; }
+  .js .slide { position: absolute;}
+  /* @end */
+
+	/* @group -pagers */
+  .nav-pager, .nav-prev-next { font-size: 14px; line-height: 14px; list-style: none; margin: 0; overflow: hidden; position: fixed; z-index: 100; }
+  .nav-pager li, .nav-prev-next li { border: none; float: left; padding: 0; }
+  .nav-pager a, .nav-prev-next a { display: block; line-height: 12px; }
+  .nav-pager { bottom: 0; left: 20px; }
+  .nav-pager li { margin-right: 10px; }
+  .nav-pager a, .nav-prev-next a { background: #627AAD; color: #fff; padding: 10px 5px; text-decoration: none; }
+  .nav-pager .current a, .nav-prev-next a:hover { background: #627AAD; color: #fff; }
+  .nav-prev-next { right: 20px; top: 0; }
+  .nav-prev-next li { margin-left: 10px; }
+	/* @end */
+
+/* @end */
+
+/*Custom styles-Krishna*/
+.headerSpan{
+    display:inline-block; height:50px;float:left; font-size:30px; line-height:45px
+}
+.headerImg
+{
+    margin-left:180px;    
+}
+.headerTitle{margin-left:15px;}
+.slide h1{position: absolute; left: 350px; top: 0.5em; white-space:nowrap; color: #DDDDEE  }
+
+.slide:first-child h1 {position: static; font:  45px Helvetica,sans-serif; margin: 1em 0 0; line-height: 150px; color: #34346B;}
+.slide:first-child h3 {font:  30px Helvetica,sans-serif; margin: 5px 0 0;}
+.slide:first-child h4 {font: 22px Helvetica,sans-serif; margin: 10px 0 0;}
+textarea{ border:none; overflow: hidden; font:18px/36px Helvetica,Arial,Sans-Serif; color: #224466; padding: 3px;}
+textarea:hover { outline: 1px dotted #F29A04; }
+input[type=button]{margin-left: 10px;}
+
+.alignCenter{text-align:center;}
+/* Orange: #F29A04, Navy blue: #34346B, sky blue: #03C2F1, Elephant gray: #808080 , Cement: #DDDDEE*/
+/*Custom styles-Krishna*/
